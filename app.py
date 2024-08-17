@@ -1,6 +1,10 @@
 from flask import Flask
 from flask_cors import CORS
 from routes.blog_routes import blog_bp
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
